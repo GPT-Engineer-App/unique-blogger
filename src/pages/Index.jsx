@@ -1,4 +1,5 @@
 import { Container, Text, VStack, Heading, Box, Image, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FaPenNib } from "react-icons/fa";
 
 const Index = () => {
@@ -10,8 +11,8 @@ const Index = () => {
         <Text fontSize="lg" textAlign="center">
           Hi there! I'm [Your Name], and this is my personal blog where I share my thoughts, experiences, and stories.
         </Text>
-        <Button leftIcon={<FaPenNib />} colorScheme="teal" variant="solid" size="lg">
-          Read My Latest Post
+        <Button as={Link} to="/add-post" leftIcon={<FaPenNib />} colorScheme="teal" variant="solid" size="lg">
+          Add New Post
         </Button>
       </VStack>
     </Container>
